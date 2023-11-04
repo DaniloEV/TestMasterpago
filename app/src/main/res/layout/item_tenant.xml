@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_normal"
+    android:layout_marginVertical="@dimen/margin_small"
+    android:padding="@dimen/margin_small"
+    app:cardCornerRadius="@dimen/common_radius"
+    app:cardElevation="@dimen/common_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/mcv_producto"
+            android:layout_width="@dimen/home_image_size"
+            android:layout_height="@dimen/home_image_size"
+            android:layout_margin="@dimen/margin_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--                android:src="@drawable/brea"-->
+            <ImageView
+                android:id="@+id/img_tenant"
+                android:layout_width="@dimen/recipeImg"
+                android:layout_height="@dimen/recipeImg"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/txt_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginStart="5dp"
+            android:lines="2"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txt_descripcion"
+            app:layout_constraintEnd_toStartOf="@+id/mcv_producto2"
+            app:layout_constraintStart_toEndOf="@+id/mcv_producto"
+            app:layout_constraintTop_toTopOf="@+id/mcv_producto"
+            android:text="Producto"></TextView>
+        <TextView
+            android:id="@+id/txt_descripcion"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintBottom_toBottomOf="@+id/mcv_producto"
+            app:layout_constraintEnd_toStartOf="@+id/mcv_producto2"
+            app:layout_constraintStart_toStartOf="@+id/txt_titulo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_titulo"
+            tools:text="ProductoDescripcion" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_producto2"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageButton
+                android:id="@+id/btnGoToNextPage"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:src="@drawable/ic_outline_check_circle_24"></ImageButton>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
